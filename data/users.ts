@@ -2,26 +2,26 @@ import { UserType } from "@/types/types";
 
 export const user: UserType[] = [
   {
-    username: "Jason",
-    password: "Mraz",
+    username: "a",
+    password: "b",
     category: null,
     recipes: [],
   },
   {
-    username: "Buddhi",
-    password: "buddhi",
+    username: "c",
+    password: "d",
     category: null,
     recipes: [],
   },
   {
-    username: "Seth",
-    password: "seth",
+    username: "e",
+    password: "f",
     category: null,
     recipes: [],
   },
   {
-    username: "Your",
-    password: "self",
+    username: "g",
+    password: "h",
     category: null,
     recipes: [],
   },

@@ -7,15 +7,18 @@ const ProfilePage = () => {
   const { user } = useUserContext() as UserContextType;
 
   return (
-    <div>
-      <h2>Saved recipes</h2>
+    <div className="p-4">
+      <h2 className="text-foreground text-xl md:text-2xl mb-4">
+        Saved recipes
+      </h2>
       {user?.recipes.length === 0 ? (
-        <p>No recipes saved</p>
+        <p className="text-foreground">No recipes saved</p>
       ) : (
-      user?.recipes &&
-        user.recipes.map((recipe) => (
-          <RecipeCard key={recipe.idMeal} {...recipe} />
-        ))
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {user?.recipes.map((recipe) => (
+            <RecipeCard key={recipe.idMeal} {...recipe} />
+          ))}
+        </div>
       )}
     </div>
   );

@@ -10,16 +10,16 @@ const LogInWrapper = ({ children }: { children: ReactNode }) => {
   const { user } = useUserContext() as UserContextType;
   return (
     <div className="grow">
-      {user ? 
+      {user ? (
         <>
           <Navigation />
           <div className="px-4 text-center wrap flex justify-center">
-          {children}
+            {children}
           </div>
         </>
-       : 
+      ) : (
         <LogIn />
-      }
+      )}
     </div>
   );
 };

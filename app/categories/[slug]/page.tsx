@@ -18,11 +18,19 @@ const CategoryPage = async ({ params }: { params: { slug: string } }) => {
   }
 
   return (
-    <div>
-      <h3>Here are {slug} recipes</h3>
-      <CategoryButton strCategory={slug} />
-      {recipes &&
-        recipes.map((recipe) => <RecipeCard key={recipe.idMeal} {...recipe} />)}
+    <div className="p-4">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-foreground text-xl md:text-2xl">
+          Here are {slug} recipes
+        </h3>
+        <CategoryButton strCategory={slug} />
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {recipes &&
+          recipes.map((recipe) => (
+            <RecipeCard key={recipe.idMeal} {...recipe} />
+          ))}
+      </div>
     </div>
   );
 };

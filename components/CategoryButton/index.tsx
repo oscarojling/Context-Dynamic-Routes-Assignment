@@ -12,7 +12,7 @@ const CategoryButton = ({ strCategory }: { strCategory: string }) => {
         setUser({ ...user, category: "" });
   };
 
-  return <button className={`bg-blue-700 text-white p-4 rounded-xl`} onClick={handleClick}>{user?.category === strCategory ? "Remove": "Set"}</button>;
+  return <button className={`bg-secondary text-foreground p-4 rounded-xl`} onClick={handleClick}>{user?.category === strCategory ? "Remove": "Set"}</button>;
 };
 
 export default CategoryButton;

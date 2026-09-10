@@ -34,21 +34,35 @@ const RecipePage = async ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <div>
-      <h2>{id}</h2>
+    <div className="p-4 max-w-2xl mx-auto">
       {recipe! && (
         <div>
-          <h2>{recipe.strMeal}</h2>
-          <p>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+            {recipe.strMeal}
+          </h2>
+          <p className="text-foreground mb-4">
             This is a {recipe.strCategory} recipe from {recipe.strCountry}
           </p>
-          <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-          <p>Ingredients: </p>
+
+          <img
+            className="w-full max-w-md h-64 object-cover rounded-2xl mx-auto mb-6"
+            src={recipe.strMealThumb}
+            alt={recipe.strMeal}
+          />
+
+          <p className="text-foreground font-bold mb-2">Ingredients: </p>
           {recipe.ingredients.map((ingredient, index) => (
-            <p key={index}>{ingredient}</p>
+            <p className="font-mono text-sm text-foreground" key={index}>
+              {ingredient}
+            </p>
           ))}
-          <div>{recipe.strInstructions}</div>
-          <RecipeButton {...recipe} />
+
+          <div className="text-foreground mt-4 leading-relaxed max-w-prose">
+            {recipe.strInstructions}
+          </div>
+          <div className="mt-4 text-center">
+            <RecipeButton {...recipe} />
+          </div>
         </div>
       )}
     </div>

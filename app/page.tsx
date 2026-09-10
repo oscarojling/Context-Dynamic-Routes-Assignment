@@ -40,14 +40,22 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="p-4 max-w-md mx-auto text-center">
       {user && (
-        <p className="text-3xl my-4">
+        <p className="text-2xl md:text-3xl text-foreground my-4">
           Hi, {user.username}! Welcome to our website!
         </p>
       )}
-      {user && <p>You have {user.recipes.length} saved recipes</p>}
-      {recipe && <RecipeCard {...recipe} />}
+      {user && (
+        <p className="text-foreground mb-4">
+          You have {user.recipes.length} saved recipes
+        </p>
+      )}
+      {recipe && (
+        <div className="max-w-xs mx-auto">
+          <RecipeCard {...recipe} />
+        </div>
+      )}
     </div>
   );
 }

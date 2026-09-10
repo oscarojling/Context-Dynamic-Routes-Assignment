@@ -23,7 +23,7 @@ const RecipeButton = ({ idMeal, strMeal, strMealThumb }: RecipeType) => {
     }
   };
   return (
-    <button onClick={handleClick} className="bg-indigo-500 text-white p-4 my-4">
+    <button onClick={handleClick} className="bg-primary text-white p-4 my-4">
       {user && user.recipes.find((recipe) => recipe.idMeal === idMeal)
         ? "Remove the Recipe"
         : "Save  Recipe"}

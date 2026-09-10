@@ -14,12 +14,14 @@ const CategoriesPage = async () => {
   }
 
   return (
-    <div>
-      <h2>Categories Page</h2>
-      {categories &&
-        categories.map((category) => (
-          <CategoryCard key={category.idCategory} {...category} />
-        ))}
+    <div className="p-4">
+      <h2 className="text-foreground text-xl md:text-2xl mb-4">Categories Page</h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {categories &&
+          categories.map((category) => (
+            <CategoryCard key={category.idCategory} {...category} />
+          ))}
+      </div>
     </div>
   );
 };

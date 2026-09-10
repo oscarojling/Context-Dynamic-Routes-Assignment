@@ -31,7 +31,7 @@ const LogIn = () => {
         Enter your username
       </label>
       <input
-        className="field border border-surface rounded-lg p-2 bg-background"
+        className="field border border-surface rounded-lg p-2 bg-background w-full"
         id="username"
         placeholder="Enter username"
         onChange={handleUsername}
@@ -41,7 +41,7 @@ const LogIn = () => {
         Enter your password
       </label>
       <input
-        className="field border border-surface rounded-lg p-2 bg-background"
+        className="field border border-surface rounded-lg p-2 bg-background w-full"
         type="password"
         id="password"
         placeholder="Enter password"

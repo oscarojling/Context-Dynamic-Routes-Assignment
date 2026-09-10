@@ -5,6 +5,7 @@ import { RecipeType, UserContextType } from "@/types/types";
 
 const RecipeButton = ({ idMeal, strMeal, strMealThumb }: RecipeType) => {
   const { user, setUser } = useUserContext() as UserContextType;
+  
   const handleClick = () => {
     const recipe: RecipeType = { idMeal, strMeal, strMealThumb };
     const alreadySaved = user!.recipes.find(
@@ -15,7 +16,7 @@ const RecipeButton = ({ idMeal, strMeal, strMealThumb }: RecipeType) => {
     if (alreadySaved) {
       setUser({
         ...user!,
-        recipes: user!.recipes.filter((savedRecipe) => savedRecipe !== recipe),
+        recipes: user!.recipes.filter((savedRecipe) => savedRecipe.idMeal !== idMeal),
       });
     } else {
       setUser({ ...user!, recipes: [...user!.recipes, recipe] });

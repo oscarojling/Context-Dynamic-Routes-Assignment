@@ -4,4 +4,15 @@
   box-sizing: border-box;
 }
 
-.field {@apply block m-2}
+@theme {
+  --color-background: #fbf1e4;
+  --color-foreground: #2b1b14;
+  --color-primary: #d9502c;
+  --color-secondady: #e3a72b;
+  --color-surface: #ede2d0;
+  --font-display: var(--font-fraunces), serif;
+}
+
+.field {
+  @apply block m-2;
+}

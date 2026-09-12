@@ -9,8 +9,13 @@ const ProfilePage = () => {
   return (
     <div className="p-4">
       <h2 className="text-foreground text-xl md:text-2xl mb-4">
-        Saved recipes
+        Saved recipes and category
       </h2>
+      {!user?.category ? (
+        <p className="text-foreground">No favorite category</p>
+      ) : (
+        <p className="text-foreground">Favorite category: {user.category}</p>
+      )}
       {user?.recipes.length === 0 ? (
         <p className="text-foreground">No recipes saved</p>
       ) : (

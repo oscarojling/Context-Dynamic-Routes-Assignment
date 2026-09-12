@@ -46,11 +46,6 @@ export default function Home() {
           Hi, {user.username}! Welcome to our website!
         </p>
       )}
-      {user && (
-        <p className="text-foreground mb-4">
-          You have {user.recipes.length} saved recipes
-        </p>
-      )}
       {recipe && (
         <div className="max-w-xs mx-auto">
           <RecipeCard {...recipe} />

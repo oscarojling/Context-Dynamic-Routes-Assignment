@@ -20,7 +20,7 @@ const CategoryPage = async ({ params }: { params: { slug: string } }) => {
   return (
     <div className="p-4">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-foreground text-xl md:text-2xl">
+        <h3 className="text-black text-xl md:text-2xl">
           Here are {slug} recipes
         </h3>
         <CategoryButton strCategory={slug} />

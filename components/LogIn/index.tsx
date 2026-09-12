@@ -25,13 +25,13 @@ const LogIn = () => {
   };
 
   return (
-    <form className="border rounded-2xl border-surface p-4 my-4 max-w-md mx-auto">
-      <h2 className="text-foreground text-center text-2xl">Log In</h2>
+    <form className="border rounded-2xl border-black p-4 my-4 max-w-md mx-auto">
+      <h2 className="text-center text-2xl">Log In</h2>
       <label className="field" htmlFor="username">
         Enter your username
       </label>
       <input
-        className="field border border-surface rounded-lg p-2 bg-background w-full"
+        className="field border rounded-lg p-2 bg-background w-full"
         id="username"
         placeholder="Enter username"
         onChange={handleUsername}
@@ -41,7 +41,7 @@ const LogIn = () => {
         Enter your password
       </label>
       <input
-        className="field border border-surface rounded-lg p-2 bg-background w-full"
+        className="field border rounded-lg p-2 bg-background w-full"
         type="password"
         id="password"
         placeholder="Enter password"
@@ -50,7 +50,7 @@ const LogIn = () => {
       />
       <button
         onClick={handleLogIn}
-        className="bg-primary cursor-pointer text-white p-4 rounded-2xl w-full"
+        className="bg-primary cursor-pointer text-background p-4 rounded-2xl w-full"
       >
         Log In
       </button>

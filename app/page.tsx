@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <div className="p-4 max-w-md mx-auto text-center">
       {user && (
-        <p className="text-2xl md:text-3xl text-foreground my-4">
+        <p className="text-2xl md:text-3xl my-4">
           Hi, {user.username}! Welcome to our website!
         </p>
       )}

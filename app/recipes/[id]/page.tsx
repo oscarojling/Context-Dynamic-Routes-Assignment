@@ -37,12 +37,15 @@ const RecipePage = async ({ params }: { params: { id: string } }) => {
     <div className="p-4 max-w-2xl mx-auto">
       {recipe! && (
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+          <h2 className="font-display text-2xl md:text-3xl mb-2">
             {recipe.strMeal}
           </h2>
-          <p className="text-foreground mb-4">
-            This is a {recipe.strCategory} recipe from {recipe.strCountry}
-          </p>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="inline-block bg-secondary px-3 py-1 rounded-full text-sm">
+              {recipe.strCategory}
+            </span>
+            <p>from {recipe.strCountry}</p>
+          </div>
 
           <img
             className="w-full max-w-md h-64 object-cover rounded-2xl mx-auto mb-6"
@@ -50,14 +53,14 @@ const RecipePage = async ({ params }: { params: { id: string } }) => {
             alt={recipe.strMeal}
           />
 
-          <p className="text-foreground font-bold mb-2">Ingredients: </p>
+          <p className="font-bold mb-2">Ingredients: </p>
           {recipe.ingredients.map((ingredient, index) => (
-            <p className="font-mono text-sm text-foreground" key={index}>
+            <p className="font-mono text-sm" key={index}>
               {ingredient}
             </p>
           ))}
 
-          <div className="text-foreground mt-4 leading-relaxed max-w-prose">
+          <div className="mt-4 leading-relaxed max-w-prose">
             {recipe.strInstructions}
           </div>
           <div className="mt-4 text-center">

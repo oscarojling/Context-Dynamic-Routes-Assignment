@@ -27,5 +27,5 @@ export type CategoryType = {
 
 export type UserContextType = {
   user: UserType | null;
-  setUser: (user: UserType) => void;
+  setUser: (user: UserType | null) => void;
 };

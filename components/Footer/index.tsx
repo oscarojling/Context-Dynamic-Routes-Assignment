@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="bg-surface text-center p-8">
-      <p className="text-foreground">&copy; 2026 Oscar</p>
+    <footer className="border-t border-black text-center p-8">
+      <p>&copy; 2026 Oscar</p>
     </footer>
   );
 };

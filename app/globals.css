@@ -6,10 +6,8 @@
 
 @theme {
   --color-background: #fbf1e4;
-  --color-foreground: #2b1b14;
   --color-primary: #d9502c;
   --color-secondary: #e3a72b;
-  --color-surface: #ede2d0;
   --font-display: var(--font-fraunces), serif;
 }
 

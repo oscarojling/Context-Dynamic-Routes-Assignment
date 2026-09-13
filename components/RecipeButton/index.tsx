@@ -31,7 +31,7 @@ const RecipeButton = ({ idMeal, strMeal, strMealThumb }: RecipeType) => {
     >
       {user && user.recipes.find((recipe) => recipe.idMeal === idMeal)
         ? "Remove the Recipe"
-        : "Save  Recipe"}
+        : "Save Recipe"}
     </button>
   );
 };

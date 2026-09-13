@@ -9,6 +9,8 @@
   --color-primary: #d9502c;
   --color-secondary: #e3a72b;
   --font-display: var(--font-fraunces), serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-sans: var(--font-geist-sans), sans-serif;
 }
 
 .field {

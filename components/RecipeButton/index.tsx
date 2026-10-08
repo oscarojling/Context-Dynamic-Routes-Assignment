@@ -33,7 +33,7 @@ const RecipeButton = ({ idMeal, strMeal, strMealThumb }: RecipeType) => {
         ? "Remove the Recipe"
         : "Save Recipe"}
     </button>
-  )
+  );
 };
 
 export default RecipeButton;
